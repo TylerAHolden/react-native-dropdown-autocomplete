@@ -147,6 +147,7 @@ Change valueExtractor and pass the data to Autocomplete without fetchDataUrl
  fetchDataUrl      | Data source url                               |   String | -
  noDataText        | Text to display when no results               |   String | No Results
  initialValue      | Text to display initially                     |   String | -
+ textInputProps    | Native props for TextInput                    |   Object | -
  inputContainerStyle | Styles for autocomplete container           |   Object | -
  disableFullscreenUI | disable display inputfield in fullscreen | Boolean | false
  inputStyle        | Styles for autocomplete input                 |   Object | -
