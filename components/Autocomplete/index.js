@@ -157,23 +157,24 @@ class Autocomplete extends Component {
   render() {
     const {inputValue, items, loading, filteredItems} = this.state;
     const {
-      placeholder,
-      scrollToInput,
-      renderIcon,
-      inputContainerStyle,
-      inputStyle,
-      spinnerStyle,
-      spinnerSize,
-      listHeader,
       autoCorrect,
-      keyboardType,
-      spinnerColor,
-      placeholderColor,
       data,
       disableFullscreenUI,
+      inputContainerStyle,
+      inputStyle,
+      keyboardType,
+      listHeader,
+      placeholder,
+      placeholderColor,
+      renderIcon,
+      scrollToInput,
+      spinnerColor,
+      spinnerSize,
+      spinnerStyle,
+      textInputProps,
       ...dropdownProps
     } = this.props;
-
+    
     return (
       <Fragment>
         <View style={[styles.inputContainerStyle, inputContainerStyle]}>
@@ -196,6 +197,7 @@ class Autocomplete extends Component {
                 scrollToInput(findNodeHandle(event.target));
               }
             }}
+            {...textInputProps}
           />
           {loading && (
             <ActivityIndicator
